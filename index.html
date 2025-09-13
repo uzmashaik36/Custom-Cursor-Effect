@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Custom Cursor Effect — CodeWithUzma</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <main class="card">
+            <h1>21. Custom Cursor Effect — Crazy UI/UX</h1>
+            <p class="lead">A smooth, interactive cursor with trailing blobs, hover-lock, click ripple and accessible
+                fallbacks. Fully responsive — hides on touch devices and shows a touch indicator. Footer credit
+                included.</p>
+
+            <div class="controls">
+                <button class="btn" data-action="primary">Primary Action</button>
+                <button class="btn" data-action="secondary">Secondary Action</button>
+                <div class="faux-link" tabindex="0">Cool Link</div>
+                <div class="faux-link" tabindex="0">Hover Me</div>
+            </div>
+
+            <div class="link-list">
+                <div class="faux-link" tabindex="0">Portfolio</div>
+                <div class="faux-link" tabindex="0">Projects</div>
+                <div class="faux-link" tabindex="0">Contact</div>
+                <div class="faux-link" tabindex="0">Blog</div>
+            </div>
+
+            <p style="margin-top:20px;color:rgba(230,238,248,0.6);font-size:14px">Tip: Hover any button or link to see
+                the cursor lock and grow. Click anywhere to see a ripple. On mobile the custom cursor is removed for
+                usability and you'll see the <strong>touch indicator</strong> in the corner.</p>
+
+            <footer>
+                <span>Made with ❤️ by <span class="brand">CodeWithUzma</span></span>
+            </footer>
+        </main>
+
+        <aside class="meta card">
+            <h3>JS Techniques Used</h3>
+            <ul>
+                <li>Pointer events: pointermove, pointerdown, pointerup</li>
+                <li>requestAnimationFrame for smooth cursor follow & lerp motion</li>
+                <li>Event delegation for hover/lock behavior</li>
+                <li>DOM manipulation & class toggling for interaction states</li>
+                <li>Touch detection & accessible fallbacks</li>
+                <li>Dynamic element creation for click ripple and trailing blobs</li>
+            </ul>
+            <h3 style="margin-top:12px">Responsive behavior</h3>
+            <ul>
+                <li>Media queries to hide custom cursor on small screens</li>
+                <li>Touch indicator for tap-based devices</li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Custom cursor elements (added by JS) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
+    <div class="cursor-trail" aria-hidden="true"></div>
+    <div class="touch-indicator">Tap: Interact</div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
